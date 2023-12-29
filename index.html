@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Briju's Calculator </title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="title">Briju's Calculator</h1>
+    <h2 class="js-calculation"></h2>
+    <p>
+        <button onclick="
+                calOperation('1');
+            " class="js-numberbutton">
+            1
+        </button>
+        <button onclick="
+                calOperation('2');
+            " class="js-numberbutton">
+            2
+        </button>
+        <button onclick="
+                calOperation('3');
+            " class="js-numberbutton">
+            3
+        </button>
+        <button onclick="
+                calOperation('+');
+            " class="js-symbolbutton">
+            +
+        </button>
+        <button onclick="
+            calOperation('**');
+            " class="js-exponentbutton">
+            x<sup class="y">y</sup>
+        </button>
+    </p>
+    <p>
+        <button onclick="
+                calOperation('4');
+            " class="js-numberbutton">
+            4
+        </button>
+        <button onclick="
+                calOperation('5');
+            " class="js-numberbutton">
+            5
+        </button>
+        <button onclick="
+                calOperation('6');
+            " class="js-numberbutton">
+            6
+        </button>
+        <button onclick="
+                calOperation('-');
+            " class="js-symbolbutton">
+            −
+        </button>
+        <button onclick="
+                calculation = '';
+                console.log(`Cleared`);
+                displaycalculation();
+                localStorage.setItem('calculation',calculation);
+            " class="js-numberbutton Clear-button">
+            Clear
+        </button>
+    </p>
+    <p>
+        <button onclick="
+                calOperation('7');
+            " class="js-numberbutton">
+            7
+        </button>
+        <button onclick="
+                calOperation('8');
+            " class="js-numberbutton">
+            8
+        </button>
+        <button onclick="
+                calOperation('9');
+            " class="js-numberbutton">
+            9
+        </button>
+
+        <button onclick="
+                calOperation('*');
+            " class="js-symbolbutton">
+            ×
+        </button>
+    </p>
+    <p>
+        <button onclick="
+            calOperation('0');
+            " class="js-numberbutton">
+            0
+        </button>
+        <button onclick="
+                calOperation('.');
+            " class="js-numberbutton">
+            •
+        </button>
+        <button onclick="
+                calculation = eval(calculation);
+                displaycalculation();
+                localStorage.setItem('calculation',calculation);
+            " class="js-numberbutton">
+            =
+        </button>
+        <button onclick="
+                calOperation('/');
+            " class="js-symbolbutton">
+            ÷
+        </button>
+
+    </p>
+
+    <script src="calculator.js"></script>
+</body>
+
+</html>
