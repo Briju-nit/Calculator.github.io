@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briju's Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Briju's Calculator</h1>
+        <div class="display">
+            <h2 class="js-calculation"></h2>
+            <sup class="js-exponent"></sup>
+        </div>
+        <div class="button-container">
+            <div class="row">
+                <button onclick="calOperation('+');" class="js-symbolbutton">+</button>
+                <button onclick="calOperation('-');" class="js-symbolbutton">−</button>
+                <button onclick="calOperation('*');" class="js-symbolbutton">×</button>
+                <button onclick="calOperation('/');" class="js-symbolbutton">÷</button>
+                <button onclick="calOperation('**');" class="js-symbolbutton">x<sup class="y">y</sup></button>
+            </div>
+            <div class="row">
+                <button onclick="handleSpecialFunction('Math.sqrt');" class="js-symbolbutton">√</button>
+                <button onclick="handleSpecialFunction('Math.log10');" class="js-symbolbutton">log</button>
+                <button onclick="handleSpecialFunction('Math.sin');" class="js-symbolbutton">sin</button>
+                <button onclick="handleSpecialFunction('Math.cos');" class="js-symbolbutton">cos</button>
+                <button onclick="handleSpecialFunction('Math.tan');" class="js-symbolbutton">tan</button>
+            </div>
+            <div class="row">
+                <button onclick="calOperation('1');" class="js-numberbutton">1</button>
+                <button onclick="calOperation('2');" class="js-numberbutton">2</button>
+                <button onclick="calOperation('3');" class="js-numberbutton">3</button>
+                <button onclick="calOperation('4');" class="js-numberbutton">4</button>
+                <button onclick="calOperation('5');" class="js-numberbutton">5</button>
+            </div>
+            <div class="row">
+                <button onclick="calOperation('6');" class="js-numberbutton">6</button>
+                <button onclick="calOperation('7');" class="js-numberbutton">7</button>
+                <button onclick="calOperation('8');" class="js-numberbutton">8</button>
+                <button onclick="calOperation('9');" class="js-numberbutton">9</button>
+                <button onclick="calOperation('0');" class="js-numberbutton">0</button>
+            </div>
+            <div class="row tool">
+                <button onclick="calOperation('.');" class="js-symbolbutton"
+                    style="background-color: lightgreen;">•</button>
+                <button onclick="calculateResult();" class="js-symbolbutton"
+                    style="background-color: lightgreen;">=</button>
+                <button onclick="openParenthesis();" class="js-symbolbutton"
+                    style="background-color: lightgreen;">(</button>
+                <button onclick="closeParenthesis();" class="js-symbolbutton"
+                    style="background-color: lightgreen;">)</button>
+            </div>
+            <br />
+            <div class="row">
+                <button onclick="clearScreen();" class="js-symbolbutton Clear-button"
+                    style="background-color: lightgreen;">Clr</button>
+                <button onclick="deleteLastChar();" class="js-symbolbutton Delete-button"
+                    style="background-color: lightgreen;">Del</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
